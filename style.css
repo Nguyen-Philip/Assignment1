@@ -65,7 +65,7 @@ li:hover {
 }
 
 ol {
-  list-style-type: upper-roman;
+  list-style-type: decimal;
 }
 
 ol ol {
@@ -73,7 +73,7 @@ ol ol {
 }
 
 table {
-  background-color: black;
+  background-color: grey;
 }
 
 th {
@@ -84,12 +84,15 @@ th {
 }
 
 td {
-  background-color: lightgrey;
   color: black;
   border-style: solid;
   padding: 5px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5em;
+}
+
+tr:nth-child(even) {
+  background-color: lightgrey;
 }
 
 .container {
@@ -126,4 +129,42 @@ td {
   border-width: none;
   border-style: none;
   border-radius: none;
+}
+
+ol#upperRoman {
+  list-style-type: upper-roman;
+}
+
+li#removeStyleAddColor1 {
+  pointer-events: none;
+  background-color: rgb(50, 50, 255, 0.4);
+  width: none;
+  border-color: none;
+  border-width: none;
+  border-style: none;
+  border-radius: none;
+}
+
+li#removeStyleAddColor2 {
+  pointer-events: none;
+  background-color: rgb(255, 50, 50, 0.4);
+  width: none;
+  border-color: none;
+  border-width: none;
+  border-style: none;
+  border-radius: none;
+}
+
+li#removeStyleAddColor3 {
+  pointer-events: none;
+  background-color: rgb(50, 255, 50, 0.4);
+  width: none;
+  border-color: none;
+  border-width: none;
+  border-style: none;
+  border-radius: none;
+}
+
+.removeListStyle {
+  list-style-type: none;
 }
