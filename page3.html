@@ -6,13 +6,12 @@
   <title>page3</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
-  <script src="script.js"></script>
+<body class = "body">
 
 <div class = "container">
 
 <header class = "header">
-  <img src = "Images/banner.jpg" alt= "Banner">
+  <img src = "Images/banner.jpg" alt= "Banner Image">
 </header>
 
 <nav class = "nav">
@@ -27,12 +26,47 @@
 
 <main class = "main">
   <h1> This is Page 3 </h1>
+  <form name = "myForm" action = "https://webdevbasics.net/scripts/yoga.php" onsubmit = "return validateForm()" method = "post"><br>
+    <label for = "firstName">First name: </label>
+    <input type = "text" id = "firstName" name = "firstName" size = "50" maxlength = "50"><br><br>
+    
+    <label for = "lastName">Last name: </label>
+    <input type = "text" id = "lastName" name = "lastName" size = "50" maxlength = "50"><br><br>
+    
+    <label for = "birthYear">Birth Year: </label>
+    <input type = "number" id = "birthYear" name = "birthYear" min = "1900" max = "2022"><br><br>
+
+    <label for = "email">Email: </label>
+    <input type = "email" id = "email" name = "email"><br><br>
+
+    <label for = "username">Username: </label>
+    <input type = "text" id = "username" name = "username" minlength = "5" maxlength = "10" required><br><br>
+
+    <label for = "password">Password: </label>
+    <input type = "password" id = "password" name = "password" minlength = "8" required><br><br>
+
+    <label for = "confirmPassword">Re-enter Password: </label>
+    <input type = "password" id = "confirmPassword" name = "confirmPassword"><br><br>
+
+    <label for = "phoneNumber">Phone Number: </label>
+    <input type = "tel" id = "phoneNumber" name = "phoneNumber" pattern ="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder = "###-###-####" "><br><br>
+    
+    <input type = "submit">
+  </form>
 </main>
 
+<aside class = "aside">
+  <svg>
+    <circle class = "circle">
+  </svg>
+</aside>
+  
 <footer class = "footer">
   <p> Web Designer: Philip Nguyen | 2022 | email_address@columbusstate.edu | (999)-999-9999 </p>
 </footer>
 
+<script src="script.js"></script>
+  
 </div>
 
 </body>

@@ -1,23 +1,27 @@
 body {
-  color: black;
   background-color: lightblue;
+  color: black;
   font-family: 'Times New Roman', Times, serif;
   font-size: 15px;
 }
 
 header {
   background-color: black;
+  position: relative;
 }
 
 nav {
   position: relative;
-  right: 45px;
+  
 }
 
 main {
   position: relative;
 }
 
+aside {
+  position: relative;
+}
 
 footer {
   background-color: lightgrey;
@@ -25,6 +29,31 @@ footer {
   border-radius: 1px;
   height: 50px;
   padding: 5px;
+  position: relative;
+}
+
+canvas {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  height: 100%;
+  width: 100%;
+}
+
+iframe {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  height: 100%;
+  width: 100%;
+}
+
+svg {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  height: 100%;
+  width: 100%;
 }
 
 h1 {
@@ -95,14 +124,16 @@ tr:nth-child(even) {
   background-color: lightgrey;
 }
 
+
+
 .container {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr 2fr 2fr;
-  grid-template-areas:  "header header header header"
-                        "nav main main main"
-                        "footer footer footer footer"
-  
+  grid-template-areas:  
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
 }
 
 .header {
@@ -117,8 +148,16 @@ tr:nth-child(even) {
   grid-area: main;
 }
 
+.aside {
+  grid-area: aside;
+}
+
 .footer {
   grid-area: footer
+}
+
+.removeListStyle {
+  list-style-type: none;
 }
 
 .removeStyles {
@@ -131,9 +170,21 @@ tr:nth-child(even) {
   border-radius: none;
 }
 
-ol#upperRoman {
-  list-style-type: upper-roman;
+.circle {
+  cx: 50px;
+  cy: 50px;
+  fill: green;
+  r: 40px;
+  stroke: black;
+  stroke-width: 1;
+
 }
+
+img#maxSize {
+  height: 100%;
+  width: 100%;
+}
+
 
 li#removeStyleAddColor1 {
   pointer-events: none;
@@ -165,6 +216,47 @@ li#removeStyleAddColor3 {
   border-radius: none;
 }
 
-.removeListStyle {
-  list-style-type: none;
+ol#upperRoman {
+  list-style-type: upper-roman;
+}
+
+
+@media screen and (max-width: 700px) {
+
+  header {
+    width: 100%;
+  }
+  
+  nav {
+    width: 100%;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  aside {
+    width: 100%;
+  }
+  
+  footer {
+    height: 75px;
+    width: 100%;
+  }
+  
+  .body {
+    background-color: white;
+    color: black;
+  }
+
+  .container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas:  
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+  } 
 }
