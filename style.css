@@ -12,7 +12,6 @@ header {
 
 nav {
   position: relative;
-  
 }
 
 main {
@@ -25,8 +24,10 @@ aside {
 
 footer {
   background-color: lightgrey;
-  border: 1px solid black;
+  border-color: black;
   border-radius: 1px;
+  border-style: solid;
+  border-width: 1px;
   height: 50px;
   padding: 5px;
   position: relative;
@@ -129,7 +130,7 @@ tr:nth-child(even) {
 .container {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:  
     "header header header"
     "nav main aside"
@@ -228,6 +229,7 @@ ol#upperRoman {
   }
   
   nav {
+    right: 40px;
     width: 100%;
   }
 
@@ -243,15 +245,25 @@ ol#upperRoman {
     height: 75px;
     width: 100%;
   }
+
+  li {
+    width: 100%;
+  }
+
+  li:hover {
+    background-color: lightgrey;
+    width: 100%;
+  }
   
   .body {
-    background-color: white;
+    background-color: lightcyan;
     color: black;
   }
 
   .container {
     display: grid;
     grid-gap: 5px;
+    grid-template-columns: 1fr;
     grid-template-areas:  
       "header"
       "nav"
